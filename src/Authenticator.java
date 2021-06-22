@@ -18,8 +18,6 @@ public class Authenticator {
         String userNikitaUC = userNikita.toUpperCase(Locale.ROOT);
         String userDenis = "Denis Arinovich";
         String userDenisUC = userDenis.toUpperCase(Locale.ROOT);
-        String userKeyStroy = "KeyStroy";
-        String userKeyStroyUC = userKeyStroy.toUpperCase(Locale.ROOT);
 
         String passwordDmitry = "Merida";
         String passwordDmitryUC = passwordDmitry.toUpperCase(Locale.ROOT);
@@ -27,8 +25,6 @@ public class Authenticator {
         String passwordNikitaUC = passwordNikita.toUpperCase(Locale.ROOT);
         String passwordDenis = "Outleap";
         String passwordDenisUC = passwordDenis.toUpperCase(Locale.ROOT);
-        String passwordKeyStroy = "KeyStroy";
-        String passwordKeyStroyUC = passwordKeyStroy.toUpperCase(Locale.ROOT);
 
         boolean accessAllowder = false;
         boolean userFinder = false;
@@ -49,8 +45,8 @@ public class Authenticator {
 
             } else if ((username.equals(userDmitry) || username.equals(userDmitryUC)) ||
                     (username.equals(userNikita) || username.equals(userNikitaUC)) ||
-                    (username.equals(userDenis) || username.equals(userDenisUC)) ||
-                    (username.equals(userKeyStroy) || username.equals(userKeyStroyUC))) {
+                    (username.equals(userDenis) || username.equals(userDenisUC))) {
+
                 JOptionPane.showMessageDialog(null, "Пользователь " + username + " найден!");
                 userFinder = true;
 
@@ -71,8 +67,8 @@ public class Authenticator {
                 }
             } else if ((username.equals(userDmitry) || username.equals(userDmitryUC)) && (password.equals(passwordDmitry) || password.equals(passwordDmitryUC)) ||
                     (username.equals(userNikita) || username.equals(userNikitaUC)) && (password.equals(passwordNikita) || password.equals(passwordNikitaUC)) ||
-                    (username.equals(userDenis) || username.equals(userDenisUC)) && (password.equals(passwordDenis) || password.equals(passwordDenisUC)) ||
-                    (username.equals(userKeyStroy) || username.equals(userKeyStroyUC)) && (password.equals(passwordKeyStroy) || password.equals(passwordKeyStroyUC))) {
+                    (username.equals(userDenis) || username.equals(userDenisUC)) && (password.equals(passwordDenis) || password.equals(passwordDenisUC))) {
+
                 JOptionPane.showMessageDialog(null, "Вы допущены в систему. Добро пожаловать!");
                 passwordFinder = true;
 
@@ -83,8 +79,7 @@ public class Authenticator {
 
         if (userFinder && passwordFinder) {
             accessAllowder = true;
-        }
 
-        JOptionPane.showMessageDialog(null, "Я честно заебался делая эту хуйню. Пиздец. Если подскажешь как блять у большинства окон 'JOptionPlane' изменить заголовок на свой (как у этого окна) - расцелую в щеки!", "блятский кастомный заголовок", JOptionPane.INFORMATION_MESSAGE, null);
+        }
     }
 }
